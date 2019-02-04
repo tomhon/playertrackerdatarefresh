@@ -3,7 +3,7 @@
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize(process.env.sqldatabase, process.env.sqlusername, process.env.sqlpassword, {
-    host: 'playertracking.database.windows.net',
+    host: process.env.sqlserver,
     dialect: 'mssql',
     dialectOptions: {encrypt: true},
     operatorsAliases: false
