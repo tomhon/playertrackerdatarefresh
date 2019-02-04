@@ -35,6 +35,7 @@ const GameTrackingTable = sequelize.define('testGameTrackingTable', {
   gameMatchState: {type: Sequelize.CHAR(50), defaultValue: "Pre-Game"},
   gameMostRecentStartTime: {type: Sequelize.BIGINT, defaultValue: 0},
   gameTotalElapsedTime: {type: Sequelize.BIGINT, defaultValue: 0},
+  gameStartTime: {type: Sequelize.DATE},
 
   //away team data
   gameAwayClub: {type: Sequelize.CHAR(255), defaultValue: "Away Club Name"},
