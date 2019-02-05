@@ -27,7 +27,7 @@ const GameTrackingTable = sequelize.define('testGameTrackingTable', {
   playerGameId: {type: Sequelize.UUID, defaultValue: Sequelize.UUIDV4, primaryKey:true}, //a unique ID is assigned to each player for each game
 
   //game specific data
-  gameId: {type: Sequelize.UUID}, //a unique ID is assigned for each game which is shared by all players in that game
+  gameId: {type: Sequelize.UUID, defaultValue: Sequelize.UUIDV4}, //a unique ID is assigned for each game which is shared by all players in that game
   gameField: {type: Sequelize.CHAR(255), defaultValue: "Game Field"},
   gameFinalWhistleCount: {type: Sequelize.SMALLINT, defaultValue: 0},
   gameKickOffCount: {type: Sequelize.SMALLINT, defaultValue: 0},

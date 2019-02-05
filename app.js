@@ -10,7 +10,7 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
 
 const GameTrackingTable = require("./gameTrackingTableModel");
 
-
+// load local model from database
 // force: true will drop the table if it already exists
 GameTrackingTable.sync({force:false}).then(() => {
     console.log('Database is online');
