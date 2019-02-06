@@ -8,6 +8,12 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
   console.log('%s listening to %s', server.name, server.url); 
 });
 
+//setup Application Insights Monitoring 
+const appInsights = require("applicationinsights");
+appInsights.setup(process.env.APPINSIGHTS_INSTRUMENTATIONKEY);
+appInsights.start();
+
+
 const GameTrackingTable = require("./gameTrackingTableModel");
 
 // load local model from database

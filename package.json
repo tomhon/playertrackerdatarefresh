@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/tomhon/playertrackerdatarefresh#readme",
   "dependencies": {
+    "applicationinsights": "^1.1.0",
     "restify": "^7.7.0",
     "sequelize": "^4.42.0",
     "tedious": "^4.1.3"
